@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lightBoxImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cambiado de 100dvw */
+  height: 100vh; /* Cambiado de 100dvh */
+  background-color: rgba(0, 0, 0, 0.8); /* Mejor contraste para la imagen */
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  display: flex; /* Centra el contenido */
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.image {
+  max-width: 80%;
+  max-height: 80%; /* Limita el tamaño para evitar desbordes */
+  object-fit: contain; /* Ajusta la imagen */
+  border-radius: 10px; /* Añade un pequeño redondeo */
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+*::after, *::before{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+:root{
+  scroll-behavior:smooth;
+  --clr-black: #1c1c1c;
+  --clr-white: #E5CDB8;
+  --clr-orange: #ffa61d;
+  --clr-blue: #229ea7;
+  --clr-grey: #9a8195;
+  --titles: "Zen Dots", sans-serif;
+  --texts:"Poppins", sans-serif;
+}
+body{
+  background-color:var(--clr-white);
+  color:var(--clr-black);
+  font-family:var(--texts);
+}
+.dark{
+  background-color:var(--clr-black);
+  color:var(--clr-white);
+}
+
+
+h2{
+  font-family:var(--titles);
+}
+p{
+  font-family:var(--texts) ;
+}
+.title{
+  font-family:"Zen Dots", sans-serif;
+}
+main{
+  transition: all .3s;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-inline: 2rem;
+    text-align:left;
+}
+

@@ -1,0 +1,33 @@
+
+[
+    {
+      "title": "Desarrollo web",
+      "description": "Este curso abordó los conceptos fundamentales del desarrollo web tales como etiquetas semánticas, SEO, control de versiones con Git y GitHub y el uso de tecnologías orientadas a acelerar el desarrollo tales como Sass, Bootstrap, entre otras.",
+      "img": "../assets/certificados/desarrollo_web.png"
+    },
+    {
+      "title": "Javascript",
+      "description": "En este curso aprendí los fundamentos del lenguaje de programación JavaScript, abordando temas como manipulación del DOM, manejo de eventos, promesas, asincronía, y patrones de diseño como callbacks y closures. También adquirí habilidades en ES6+, incluyendo el uso de funciones flecha, desestructuración de objetos y arrays, y clases. Esto me permitió desarrollar aplicaciones dinámicas y optimizadas para el frontend y backend.",
+      "img": "../assets/certificados/javascript.png"
+    },
+    {
+      "title": "React js",
+      "description": "En este curso profundicé en la librería React.js, aprendiendo a crear interfaces de usuario interactivas y componibles. Dominié el ciclo de vida de los componentes, la gestión del estado con hooks como useState y useEffect, y la navegación con React Router. Además, trabajé con herramientas como Redux para la gestión global del estado y comprendí el proceso de optimización de aplicaciones React a través de técnicas como el memoizing y el lazy loading.",
+      "img": "../assets/certificados/react.png"
+    },
+    {
+      "title": "Desarrollo Backend",
+      "description": "En este curso aprendí a crear aplicaciones web robustas y escalables usando Node.js con el framework Express.js. Desarrollé APIs RESTful; modelé bases de datos noSQL con Mongo y Mongoose y sistemas de autenticación y autorización basados en JWT y roles controlados por middlewares, y el renderizado de forma dinámica con Handlebars. Al finalizar, logré crear un proyecto completo orientado a un eCommerce.",
+      "img": "../assets/certificados/backend.png"
+    },
+    {
+      "title": "Desarrollo de apps react native",
+      "description": "En este curso, aprendí a desarrollar aplicaciones móviles multiplataforma con React Native. Me familiaricé con el uso de componentes nativos, navegación entre pantallas, gestión del estado global utilizando Context API y Redux, así como el acceso a APIs nativas del dispositivo, como la cámara y el GPS. Además, dominé la implementación de autenticación, almacenamiento en bases de datos locales y remotas, y la optimización del rendimiento de las aplicaciones móviles.",
+      "img": "../assets/certificados/desarrollo_mobile.png"
+    },
+    {
+      "title": "Ciberseguridad",
+      "description": "En este curso se abordaron conceptos clave de la ciberseguridad tales como la protección de datos, la detección de vulnerabilidades en sistemas y aplicaciones y el desarrollo seguro. Aprendí sobre técnicas de ataque como inyección SQL, XSS, Cookie hijacking, y cómo prevenirlas a través de buenas prácticas de programación. Adicionalmente, aprendí sobre criptografía, esteganografía, protocolos de red y escaneo y análisis con herramientas como Nmap y Wireshark.",
+      "img": "../assets/certificados/ciberseguridad.png"
+    }
+]

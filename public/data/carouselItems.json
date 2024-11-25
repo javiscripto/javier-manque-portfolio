@@ -1,0 +1,17 @@
+[
+  {"name":"mongodb"},
+  {"name":"html5"},
+  {"name":"css3"},
+  {"name":"bootstrap"},
+  {"name":"sass"},
+  {"name":"javascript"},
+  {"name":"react"},
+  {"name":"firebase"},
+  {"name":"python"},
+  {"name":"flask"},
+  {"name":"nodejs"},
+  {"name":"git"},
+  {
+    "name":"data",
+    "type":"solid"}
+]
