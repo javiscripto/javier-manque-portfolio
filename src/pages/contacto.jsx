@@ -77,7 +77,7 @@ export default function Contacto() {
               <textarea placeholder='Deja aquí tu mensaje, con gusto lo leeré' name="mensaje" onChange={handleInput} />
             </div>
 
-            <button type='submit'>enviar</button>
+            <button type='submit'>Enviar</button>
           </form>
         </div>
       </div>

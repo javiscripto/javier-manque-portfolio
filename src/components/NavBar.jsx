@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../context/themeContext";
@@ -7,9 +7,23 @@ export default function NavBar() {
 
 
   const { themeHandler, isDarkTheme } = useContext(ThemeContext)
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
     <nav className={styles.navContainer}>
-      <ul className={styles.navInner}>
+      <div className={styles.iconContainer}>
+        <button onClick={handleVisibility} className={`${styles.closed} ${isVisible ? styles.open : ""}`}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </div>
+      <ul className={`${styles.navInner} ${isVisible ? styles.navInnerVisible : ""
+        }`}>
         <li className={styles.navItem}>
           <NavLink className={styles.navLink} to='/'>Inicio</NavLink>
         </li>
@@ -39,7 +53,7 @@ export default function NavBar() {
 
 
 
-    </nav>
+    </nav >
   )
 }
 

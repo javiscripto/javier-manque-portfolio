@@ -1,11 +1,12 @@
 .formacionInner{
   position: relative;
+  width:80%;
 }
 .lightBoxImage{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100dvw;
+  width: 100vw;
   height: 100dvh;
   background-color:var(--clr-white);
   backdrop-filter:blur(10px);
