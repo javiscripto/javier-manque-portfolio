@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../context/themeContext";
@@ -7,7 +7,6 @@ export default function NavBar() {
 
 
   const { themeHandler, isDarkTheme } = useContext(ThemeContext)
-  console.log("dark theme?:", isDarkTheme)
   return (
     <nav className={styles.navContainer}>
       <ul className={styles.navInner}>
