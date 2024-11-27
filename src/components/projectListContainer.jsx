@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Projectcard } from './ProjectCard';
-import styles from "./projectContainer.module.css"
+import styles from "./cardContainer.module.css"
 import { fetchData } from '../helpers/fetchData';
 export const ProjectListContainer = () => {
   const [projects, setProjects] = useState([]);

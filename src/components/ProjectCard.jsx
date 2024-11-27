@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './projectCard.module.css'
-import { FadeIn } from '../components/efects/fadein';
+import styles from './Card.module.css'
+import { ScrollRevealEffect } from './efects/ScrollrevealEffect';
 
 
 
@@ -9,7 +9,7 @@ export const Projectcard = ({ project }) => {
   const { title, description, img } = project;
 
   return (
-    <FadeIn>
+<ScrollRevealEffect>
       <div className={styles.cardContainer}>
         <div className={styles.cardImg} onClick={() => handleToggleVysybility(img, true)}>
           <img src={img} alt={title} />
@@ -23,7 +23,8 @@ export const Projectcard = ({ project }) => {
 
         </div>
       </div>
-    </FadeIn>
+    
+      </ScrollRevealEffect>
 
   )
 }
