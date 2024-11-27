@@ -76,23 +76,36 @@
     visibility: visible;
   }
   .navInner {
-    display: none;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 0;
     backdrop-filter: blur(15px);
     flex-direction: column;
     height: 100vh;
     gap: 2rem;
+    transition: all 0.3s ease-in-out;
+    .navItem{
+      opacity:0;
+    }
   }
   .navInnerVisible {
+    visibility:visible;
+    width:100vw;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     justify-content: center;
+    background-color: rgba(255,166,29, 0.5);
+    backdrop-filter: blur(10px);
+    .navItem{
+      opacity:1;
+    }
+
   }
   .open{
+   
     z-index:100;
   }
   .open div:nth-child(1) {

@@ -25,24 +25,24 @@ export default function NavBar() {
       <ul className={`${styles.navInner} ${isVisible ? styles.navInnerVisible : ""
         }`}>
         <li className={styles.navItem}>
-          <NavLink className={styles.navLink} to='/'>Inicio</NavLink>
+          <NavLink onClick={handleVisibility} className={styles.navLink} to='/'>Inicio</NavLink>
         </li>
         <li className={styles.navItem} >
 
-          <NavLink className={styles.navLink} to="/sobre-mi">Quien soy</NavLink>
+          <NavLink onClick={handleVisibility} className={styles.navLink} to="/sobre-mi">Quien soy</NavLink>
         </li>
         <li className={styles.navItem}>
 
-          <NavLink className={styles.navLink} to="/formacion">formacion</NavLink>
+          <NavLink onClick={handleVisibility} className={styles.navLink} to="/formacion">formacion</NavLink>
         </li>
         <li className={styles.navItem} >
-          <NavLink className={styles.navLink} to="/proyectos">proyectos</NavLink>
+          <NavLink onClick={handleVisibility} className={styles.navLink} to="/proyectos">proyectos</NavLink>
         </li>
         <li className={styles.navItem} >
-          <NavLink className={styles.navLink} to="/tecnologias">tecnologias</NavLink>
+          <NavLink onClick={handleVisibility} className={styles.navLink} to="/tecnologias">tecnologias</NavLink>
         </li>
         <li className={styles.navItem} >
-          <NavLink className={styles.navLink} to="/contacto">contacto</NavLink>
+          <NavLink onClick={handleVisibility} className={styles.navLink} to="/contacto">contacto</NavLink>
         </li>
         <li className={styles.navItem} onClick={themeHandler}>
           <div className="toggle-mode">
