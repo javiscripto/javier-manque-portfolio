@@ -1,37 +1,108 @@
-.gridContainer{
-  display:grid;
-  grid-template-columns:3fr 2fr;
+/* Estilo base */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: 
-  "img text"
-  "img text";
+    "img text"
+    "img text";
 }
 
-.img{
-  grid-area:img;
+.img {
+  grid-area: img;
   display: flex;
-  justify-content:center;
-  img{ 
-    width:50%;
-    border-radius:.5rem;
-    position:relative;
+  justify-content: center;
+}
+
+.img img {
+  width: 50%;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.wraperImg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wraperImg img {
+  width: 250px;
+  border-radius: 0.5rem;
+}
+
+.wraperImg::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 180px;
+  border-radius: 8px;
+  background-color: orange;
+}
+
+.text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "img text";
+  }
+
+  /*.img img {*/
+  /*  width: 60%;*/
+  /*}*/
+  /**/
+  /*.wraperImg::before {*/
+  /*  width: 60%;*/
+  /*  height: 90%;*/
+  /*}*/
+}
+
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "img"
+      "text";
+  }
+
+  .img img {
+    width: 30%;
+  }
+
+  .wraperImg::before {
+    width: 30%;
+    height: 50%;
   }
 }
-.wraperImg{
-  position:relative;
-  display:flex;
-  justify-content:center ;
-  align-items: center;
 
+@media screen and (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "img"
+      "text";
+  }
+
+  .img img {
+    width: 70%;
+  }
+
+  .wraperImg::before {
+    width: 70%;
+    height: 80%;
+  }
 }
-.wraperImg::before{
-    content:"";
-    position:absolute;
-    width:45%;
-    height:90%;
-    border-radius:8px;
-    background-color:orange;
-}
-.text{
-  grid-area:text;
-}
+
