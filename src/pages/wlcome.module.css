@@ -9,8 +9,21 @@
 }
 .gridText{
   grid-area:"text";
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:1rem;
 }
 .gridCanvas{
   grid-area:"canvas";
-  /*padding:1rem;*/
+}
+@media screen and (max-width:768px){
+  .gridContainer{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+    grid-gap:1rem;
+    grid-template-areas:
+    "canvas"
+    "text";
+  }
 }
