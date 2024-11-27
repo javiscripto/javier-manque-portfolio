@@ -4,6 +4,7 @@ export const Footer = () => {
   return (
     <>
       <div className={styles.footerContainer}>
+
         <div className={styles.redesContainer}>
           <a href="#" download className={styles.iconoEnlace}>
             <box-icon name='download' type='solid'></box-icon>
@@ -16,6 +17,12 @@ export const Footer = () => {
             <box-icon type='logo' name='github'></box-icon>
 
           </a>
+          <a href="mailto:javier.manque.dev@gmail.com" target="_blank" className={styles.iconoEnlace}>
+            <box-icon type='logo' name='gmail'></box-icon>
+          </a>
+        </div>
+        <div className={styles.textContainer}>
+          <p>made with ❤️ by javiscripto</p>
         </div>
       </div>
     </>
