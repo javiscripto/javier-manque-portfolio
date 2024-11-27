@@ -21,9 +21,15 @@
   --texts:"Poppins", sans-serif;
 }
 body{
+  font-family:var(--texts);
   background-color:var(--clr-white);
   color:var(--clr-black);
-  font-family:var(--texts);
+}
+.body{
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap:1rem;
+  min-height:100vh;
 }
 .dark{
   background-color:var(--clr-black);

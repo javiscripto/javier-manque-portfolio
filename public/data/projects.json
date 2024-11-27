@@ -10,6 +10,11 @@
       "img": ""
     },
     {
+      "title": "mailer",
+      "description": "mailer es una aplicacion escrita en el framework express que utilizo para recibir correos electronicos utilizando nodemailer. El cuerpo de formuario de este portafolio se sirve de él.",
+      "img": ""
+    },
+    {
       "title": "Frontend eCommerce",
       "description": "Esta es una aplicación web Frontend pensada para un ecomerce con toda la lógica principal de un flujo de compras.",
       "img": ""

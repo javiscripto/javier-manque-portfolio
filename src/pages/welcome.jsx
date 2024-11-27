@@ -15,8 +15,8 @@ export const Welcome = () => {
 
           <ScrollRevealEffect>
             <p>
-              Soy desarollador web fullstack viviendo actualmente en la ciudad de Valdivia, Chile.
-              Tengo conocimientos en bases de datos SQL y noSQL (mySQL, SQLite y mongoDB); en los lenguajes de programacion Javascript y python y manejo frameworks de estos lenguajes tanto para el frontend como para el backend.
+              Soy programador web fullstack viviendo actualmente en la ciudad de Valdivia, Chile.Tengo conocimientos sólidos en javascript, en python y manejo frameworks de estos lenguajes tanto para el front como para el backend.
+              Además, cuento con conocimientos en bases de datos realcionales y no relacionales (mySQL, SQLite y mongoDB).
             </p>
 
           </ScrollRevealEffect>
