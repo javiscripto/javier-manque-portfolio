@@ -1,4 +1,5 @@
 .carousell{
+  padding:.5rem;
   display:flex;
   justify-content:space-between;
   width:max-content;
@@ -30,5 +31,22 @@
   }
   100%{
     transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousell{
+    animation:none;
+    width:100%;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    .carouselItem{
+      height: 68px;
+      min-width: 68px;
+background: radial-gradient(circle,
+                        rgba(34, 158, 167, 0.4),
+                        rgba(0, 0, 0, 0) 75%);
+    }
+    
   }
 }
