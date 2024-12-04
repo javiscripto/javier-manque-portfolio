@@ -9,9 +9,9 @@ export const Projectcard = ({ project }) => {
   const { title, description, img } = project;
 
   return (
-<ScrollRevealEffect>
+    <ScrollRevealEffect>
       <div className={styles.cardContainer}>
-        <div className={styles.cardImg} onClick={() => handleToggleVysybility(img, true)}>
+        <div className={`${styles.cardImg}, ${styles.projectCardImg}`} onClick={() => handleToggleVysybility(img, true)}>
           <img src={img} alt={title} />
 
         </div>
@@ -23,8 +23,8 @@ export const Projectcard = ({ project }) => {
 
         </div>
       </div>
-    
-      </ScrollRevealEffect>
+
+    </ScrollRevealEffect>
 
   )
 }
