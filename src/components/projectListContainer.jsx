@@ -12,15 +12,26 @@ export const ProjectListContainer = () => {
   const [loading, setLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [img, setimg] = useState('');
+
+  //muestra de imagenes
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+
   useEffect(() => {
     fetchData('/data/projects.json', setProjects, setLoading);
-    console.log(projects);
   }, []);
 
 
   const visibilityHandler = (childImg, childVisibility) => {
     setIsVisible(childVisibility);
     setimg(childImg);
+  };
+
+  const handleNextImg = (arr) => {
+    setCurrentImgIndex((prevIndex) => (prevIndex + 1) % arr.length);
+  };
+
+  const handlePrevImg = (arr) => {
+    setCurrentImgIndex((prevIndex) => (prevIndex - 1 + arr.length) % arr.length);
   };
 
   return (
@@ -42,14 +53,56 @@ export const ProjectListContainer = () => {
             &times; {/* Icono de cerrar */}
           </button>
 
-          <img
-            src={img}
-            alt="Imagen de proyecto"
+          <button
+            onClick={() => handlePrevImg(img)}
             style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain"
-            }} />
+              position: "absolute",
+              top: "50%",
+              left: "20px",
+              background: "transparent",
+              border: "none",
+              color: "white",
+              fontSize: "1.5rem",
+              cursor: "pointer"
+            }}>
+            &lt; {/* Icono de flecha izquierda */}
+          </button>
+
+          <button
+            onClick={() => handleNextImg(img)}
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: "20px",
+              background: "transparent",
+              border: "none",
+              color: "white",
+              fontSize: "2rem",
+              cursor: "pointer"
+            }}>
+            &gt; {/* Icono de flecha derecha */}
+          </button>
+
+          {Array.isArray(img) ? (
+            <img
+              src={img[currentImgIndex]}
+              alt="Imagen de proyecto"
+              style={{
+                height: "100%",
+              }}
+            />
+
+          ) : (
+            <img
+              src={img}
+              alt="Imagen de proyecto"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain"
+              }}
+            />)}
+
 
 
 

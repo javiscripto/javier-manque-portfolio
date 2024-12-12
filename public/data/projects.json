@@ -33,6 +33,19 @@
       "title": "GUITAR STORE Mobile eCommerce",
       "description": "esta es una aplicación hibrida escrita en react native con toda la lógica para el flujo de compras y acceso a la api nativa del dispositivo para hacer uso de la cámara, entre otras funcionalidades.",
       "url": "",
-      "img": "../assets/projects/guitarStore/1.png" 
+      "img":[
+        "../assets/projects/guitarStore/1.png",
+        "../assets/projects/guitarStore/2.png",
+        "../assets/projects/guitarStore/3.png",
+        "../assets/projects/guitarStore/4.png",
+        "../assets/projects/guitarStore/5.png",
+        "../assets/projects/guitarStore/6.png",
+        "../assets/projects/guitarStore/7.png",
+        "../assets/projects/guitarStore/8.png",
+        "../assets/projects/guitarStore/9.png",
+        "../assets/projects/guitarStore/10.png",
+        "../assets/projects/guitarStore/11.png",
+        "../assets/projects/guitarStore/12.png"
+    ]
     }
 ]
