@@ -37,14 +37,14 @@ export const ProjectListContainer = () => {
   return (
     <div style={{ position: "relative" }}>
       {isVisible && img && (
-        <div className={styles.iframeContainer}>
+        <div className={styles.iframeContainer} >
           <button
             onClick={() => setIsVisible(false)}
             style={{
               position: "absolute",
               top: "20px",
               right: "20px",
-              background: "transparent",
+              background: "rgba(0, 0, 0, 0.2)",
               border: "none",
               color: "white",
               fontSize: "1.5rem",
@@ -53,42 +53,50 @@ export const ProjectListContainer = () => {
             &times; {/* Icono de cerrar */}
           </button>
 
-          <button
-            onClick={() => handlePrevImg(img)}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "20px",
-              background: "transparent",
-              border: "none",
-              color: "white",
-              fontSize: "1.5rem",
-              cursor: "pointer"
-            }}>
-            &lt; {/* Icono de flecha izquierda */}
-          </button>
+          {Array.isArray(img) && (
+            <>
+              <button
+                onClick={() => handlePrevImg(img)}
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "20px",
+                  background: "rgba(0, 0, 0, 0.2)",
+                  border: "none",
+                  textAlign: "center",
+                  boderRadius: "40%",
+                  backdropFilter: "blur(5px)",
+                  color: "white",
+                  fontSize: "2rem",
+                  cursor: "pointer"
+                }}>
+                &lt; {/* Icono de flecha izquierda */}
+              </button>
 
-          <button
-            onClick={() => handleNextImg(img)}
-            style={{
-              position: "absolute",
-              top: "50%",
-              right: "20px",
-              background: "transparent",
-              border: "none",
-              color: "white",
-              fontSize: "2rem",
-              cursor: "pointer"
-            }}>
-            &gt; {/* Icono de flecha derecha */}
-          </button>
+              <button
+                onClick={() => handleNextImg(img)}
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  right: "20px",
+                  background: "rgba(0, 0, 0, 0.2)",
+                  border: "none",
+                  textAlign: "center",
+                  color: "white",
+                  fontSize: "2rem",
+                  cursor: "pointer"
+                }}>
+                &gt; {/* Icono de flecha derecha */}
+              </button>
+            </>)}
 
           {Array.isArray(img) ? (
             <img
               src={img[currentImgIndex]}
               alt="Imagen de proyecto"
               style={{
-                height: "100%",
+                height: "80%",
+                transition: "all 0.3s ease-in-out",
               }}
             />
 
