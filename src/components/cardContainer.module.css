@@ -23,18 +23,19 @@
   opacity: 1;
   transition: opacity 0.3s;
 }
+
 .iframeContainer {
-  position: fixed; /* Fijo para que permanezca visible al hacer scroll */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
-  display: flex; /* Centra contenido */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  color: white; /* Texto blanco */
+  z-index: 1000;
+  color: white;
 }
 
 .image {
