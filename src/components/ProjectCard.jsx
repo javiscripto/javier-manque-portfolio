@@ -6,13 +6,13 @@ import { ScrollRevealEffect } from './efects/ScrollrevealEffect';
 
 
 export const Projectcard = ({ project, visibilityHandler }) => {
-  const { title, description, url } = project;
+  const { title, description, img } = project;
 
   return (
     <ScrollRevealEffect>
       <div className={styles.cardContainer}>
-        <div className={`${styles.cardImg}, ${styles.projectCardImg}`} onClick={() => visibilityHandler(url, true)}>
-          <img src={url} alt={title} />
+        <div className={`${styles.cardImg}, ${styles.projectCardImg}`} onClick={() => visibilityHandler(img, true)}>
+          <img src={img} alt={title} />
 
         </div>
         <div className={styles.textContainer}>
@@ -20,7 +20,7 @@ export const Projectcard = ({ project, visibilityHandler }) => {
           <p>
             {description}
           </p>
-          <button onClick={() => visibilityHandler(url, true)}>Ver proyecto</button>
+          <button onClick={() => visibilityHandler(img, true)}>Ver proyecto</button>
 
         </div>
       </div>
