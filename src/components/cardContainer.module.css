@@ -14,7 +14,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8); /* Mejor contraste para la imagen */
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   z-index: 99;
   display: flex;
@@ -30,7 +30,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
