@@ -9,6 +9,7 @@
   padding: 1rem;
   border: 2px solid rgba(34, 158, 167, 0.2);
   border-radius: 8px;
+  background-color: rgba(34, 158, 167, 0.1);
   box-shadow: 8px 8px 15px rgba(34, 158, 167, 0.1);
   height: 100%;
     .cardImg{
@@ -81,6 +82,14 @@
     display:flex;
     flex-direction:column;
     gap:.5rem;
+  }
+}
+.technologiesContainer{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  span{
+    color: var(--clr-orange);
   }
 }
 
