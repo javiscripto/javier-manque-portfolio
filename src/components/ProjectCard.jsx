@@ -6,7 +6,7 @@ import { ScrollRevealEffect } from './efects/ScrollrevealEffect';
 
 
 export const Projectcard = ({ project, visibilityHandler }) => {
-  const { title, description, img } = project;
+  const { title, description, img, technologies, url } = project;
 
 
   return (
@@ -25,6 +25,15 @@ export const Projectcard = ({ project, visibilityHandler }) => {
           <p>
             {description}
           </p>
+          <div className={styles.technologiesContainer}>
+            <h4>Tecnologias utilizadas:</h4>
+            {technologies.map((tech, index) => (
+              <span key={index}>{tech}</span>
+            ))}
+          </div>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <box-icon type='logo' name='github'></box-icon>
+          </a>
           <button onClick={() => visibilityHandler(img, true)}>Ver proyecto</button>
 
         </div>
