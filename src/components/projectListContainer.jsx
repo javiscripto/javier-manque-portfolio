@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { Projectcard } from './ProjectCard';
 import styles from "./cardContainer.module.css"
 import { fetchData } from '../helpers/fetchData';
-import { Loader } from './loader';
+
+
+
 export const ProjectListContainer = () => {
-
-
-
 
 
   const [projects, setProjects] = useState([]);
@@ -118,7 +117,7 @@ export const ProjectListContainer = () => {
         </div>
 
       )}
-      {loading ? (<Loader />) : (
+      {loading ? (<h3>cargando...</h3>) : (
         <div className={styles.container}>
           {projects.map((project) => (
             <Projectcard key={project.title} project={project} img={img} visibilityHandler={visibilityHandler} />

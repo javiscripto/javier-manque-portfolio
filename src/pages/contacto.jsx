@@ -45,10 +45,10 @@ export default function Contacto() {
       });
 
       if (!response.ok) {
+        alert("ha ocurrido un error al enviar el formulario");
         throw new Error("ha ocurrido un error al enviar el formulario");
       }
       const data = await response.json();
-      console.log("data: ", data);
       setShowConfetti(true);
       setInput({
         nombre: "",
