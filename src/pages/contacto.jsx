@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ScrollRevealEffect } from '../components/efects/ScrollrevealEffect'
 import styles from "./contacto.module.css";
 import { Loader } from '../components/loader'
+import Confetti from 'react-confetti';
 
 
 
@@ -9,7 +10,7 @@ export default function Contacto() {
 
 
   const [loading, setLoading] = useState(false);
-
+  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
 
@@ -48,13 +49,15 @@ export default function Contacto() {
       }
       const data = await response.json();
       console.log("data: ", data);
-      alert("mensaje enviado con exito");
-
+      setShowConfetti(true);
       setInput({
         nombre: "",
         correo: "",
         mensaje: ""
       })
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000);
     } catch (error) {
       console.error("ha ocurrido un error al enviar el formulario: ", error)
     } finally {
@@ -66,6 +69,7 @@ export default function Contacto() {
       <div className='container'>
         <h2>Contacto</h2>
         {loading && <Loader />}
+        {showConfetti && <Confetti />}
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
 
