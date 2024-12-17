@@ -71,17 +71,24 @@ export default function Contacto() {
 
             <div className={styles.field}>
               <label>Nombre</label>
-              <input type="text" placeholder='John Perez' name="nombre" onChange={handleInput} />
+              <input type="text" placeholder='John Perez'
+                name="nombre"
+                onChange={handleInput}
+                value={input.nombre} />
             </div>
 
             <div className={styles.field}>
               <label>Email</label>
-              <input type="email" placeholder='example@mail.com' name="correo" onChange={handleInput} />
+              <input type="email" placeholder='example@mail.com'
+                name="correo" onChange={handleInput}
+                value={input.correo} />
             </div>
 
             <div className={styles.field}>
               <label>Mensaje</label>
-              <textarea placeholder='Deja aquí tu mensaje, con gusto lo leeré' name="mensaje" onChange={handleInput} />
+              <textarea placeholder='ingresa aqui tu mensaje'
+                name="mensaje" onChange={handleInput}
+                value={input.mensaje} />
             </div>
 
             <button type='submit'>Enviar</button>
