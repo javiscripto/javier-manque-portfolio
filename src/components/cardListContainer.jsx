@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from './Card';
 import styles from './cardContainer.module.css';
 import { fetchData } from '../helpers/fetchData';
+import { Loader } from './loader';
 
 export default function CardListContainer() {
   const [courses, setCourses] = useState([]);
@@ -40,7 +41,7 @@ export default function CardListContainer() {
       )}
 
       {loading ? (
-        <h3>Cargando...</h3>
+        <Loader />
       ) : (
         <div className={styles.container}>
           {courses.map((course) => (

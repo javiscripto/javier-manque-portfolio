@@ -1,18 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ScrollRevealEffect } from '../components/efects/ScrollrevealEffect'
 import styles from "./contacto.module.css";
+import { Loader } from '../components/loader'
 
 
 
 export default function Contacto() {
+
+
+  const [loading, setLoading] = useState(false);
+
+
+  useEffect(() => {
+
+  }, [loading])
 
   const [input, setInput] = useState({
     nombre: "",
     correo: "",
     mensaje: ""
   });
-
-  const [loading, setLoading] = useState(false);
 
 
   const handleInput = (e) => {
@@ -58,7 +65,7 @@ export default function Contacto() {
     <ScrollRevealEffect>
       <div className='container'>
         <h2>Contacto</h2>
-        {loading && <h3 style={{ color: "red" }}>Enviando...</h3>}
+        {loading && <Loader />}
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
 
