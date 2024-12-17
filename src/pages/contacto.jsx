@@ -28,7 +28,7 @@ export default function Contacto() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/send-email', {
+      const response = await fetch('https://mailer-tau-ten.vercel.app/send-email', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
