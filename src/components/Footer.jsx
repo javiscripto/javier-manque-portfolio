@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className={styles.footerContainer}>
 
         <div className={styles.redesContainer}>
-          <a href="#" download className={styles.iconoEnlace}>
+          <a href="/curriculumHF.pdf" download="Javier_Manque_cv.pdf" className={styles.iconoEnlace}>
             <box-icon name='download' type='solid'></box-icon>
           </a>
           <a href="https://www.linkedin.com/in/javier-ismael-manque-14a602252" target="_blank" className={styles.iconoEnlace}>
