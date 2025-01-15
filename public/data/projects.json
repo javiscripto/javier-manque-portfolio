@@ -74,7 +74,35 @@
         "react native",
         "nodejs",
         "firebase",
-        "expo"
+        "expo",
+        "SQLite",
+        "react navigation",
+        "redux"
       ]
-    }
+    },
+  {
+    "title": "SimpleNote App",
+    "description": "SimpleNote es una aplicacion escrita en react native, la cual permite crear y editar notas organizandolas por carpetas.",
+    "url": "https://github.com/javiscripto/simple-notes-App",
+    "img": [
+      "../assets/projects/simpleNoteApp/1.png",
+      "../assets/projects/simpleNoteApp/2.png",
+      "../assets/projects/simpleNoteApp/3.png",
+      "../assets/projects/simpleNoteApp/4.png",
+      "../assets/projects/simpleNoteApp/5.png",
+      "../assets/projects/simpleNoteApp/6.png",
+      "../assets/projects/simpleNoteApp/7.png",
+      "../assets/projects/simpleNoteApp/8.png",
+      "../assets/projects/simpleNoteApp/9.png",
+      "../assets/projects/simpleNoteApp/10.png"
+    ],
+    "technologies": [
+      "react",
+      "react native",
+      "expo",
+      "SQLite",
+      "react navigation",
+      "redux"
+    ]
+  }
 ]
