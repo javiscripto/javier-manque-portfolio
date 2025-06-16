@@ -1,28 +1,31 @@
-.gridContainer{
-  display:grid;
-  margin:2rem;
-  grid-template-columns:3fr 2.5fr;
-  grid-template-rows:1.5fr ;
-  grid-template-areas:
-  "canvas text ";
+a {
+  text-decoration: none;
+  visited: none;
 }
-.gridText{
-  grid-area:"text";
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:1rem;
+.gridContainer {
+  display: grid;
+  margin: 2rem;
+  grid-template-columns: 3fr 2.5fr;
+  grid-template-rows: 1.5fr;
+  grid-template-areas: "canvas text ";
 }
-.gridCanvas{
-  grid-area:"canvas";
+.gridText {
+  grid-area: "text";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
-@media screen and (max-width:768px){
-  .gridContainer{
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto;
-    grid-gap:1rem;
+.gridCanvas {
+  grid-area: "canvas";
+}
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
     grid-template-areas:
-    "canvas"
-    "text";
+      "canvas"
+      "text";
   }
 }
