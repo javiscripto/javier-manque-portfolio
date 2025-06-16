@@ -1,13 +1,11 @@
 import React from 'react'
 import styles from './Card.module.css';
-import { ScrollRevealEffect } from './efects/ScrollrevealEffect';
 
 
 export default function Card({ course, handleToggleVisibility }) {
   const { title, description, img } = course
 
   return (
-    <ScrollRevealEffect >
       <div className={styles.cardContainer} >
 
         <div
@@ -26,7 +24,6 @@ export default function Card({ course, handleToggleVisibility }) {
         </div>
       </div>
 
-    </ScrollRevealEffect>
   )
 }
 

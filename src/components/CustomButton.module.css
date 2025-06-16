@@ -1,0 +1,16 @@
+.buttonContainer {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  button {
+    background-color: var(--clr-blue);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--clr-black);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+}
