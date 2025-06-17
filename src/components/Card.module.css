@@ -9,8 +9,13 @@
   padding: 1rem;
   border: 2px solid rgba(34, 158, 167, 0.2);
   border-radius: 8px;
-  background-color: rgba(34, 158, 167, 0.1);
-  box-shadow: 8px 8px 15px rgba(34, 158, 167, 0.1);
+  /*background: #ffa61d;*/
+  background: linear-gradient(
+    355deg,
+    rgba(255, 50, 50, 1) 0%,
+    rgba(168, 141, 89, 1) 100%
+  );
+  box-shadow: 8px 8px 15px rgba(34, 0, 0, 0.1);
   height: 100%;
   .cardImg {
     width: 80%;
@@ -19,6 +24,7 @@
       width: 100%;
       position: relative;
       cursor: pointer;
+      box-shadow: 8px 8px 15px rgba(34, 0, 0, 0.5);
     }
   }
   .cardImg::after {
