@@ -37,6 +37,16 @@
   justify-content: center;
   z-index: 1000;
   color: white;
+  button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+  }
 }
 
 .image {
