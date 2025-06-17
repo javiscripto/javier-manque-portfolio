@@ -1,27 +1,27 @@
-import React, { useRef, useEffect, useContext } from 'react';
-import { ThemeContext } from '../../context/themeContext.jsx';
+import React, { useRef, useEffect, useContext } from "react";
+import { ThemeContext } from "../../context/themeContext.jsx";
 import styles from "./Canvas.module.css";
 
-export const Canvas = () => { //canvas component
+export const Canvas = () => {
+  //canvas component
 
-  const { isDarkTheme } = useContext(ThemeContext)
-
+  const { isDarkTheme } = useContext(ThemeContext);
 
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
+    const context = canvas.getContext("2d");
 
     // Establece dimensiones del canvas
     const img = new Image();
-    img.src = '/assets/jav.png';
+    img.src = "/assets/jav.png";
     img.onload = () => {
       canvas.width = img.width * 1.5;
       canvas.height = img.height;
       animatePixelSize();
     };
-    const symbols = [' ', '{', ';', '=', '<', '/', '>', 'p', ',', ' '];
+    const symbols = [" ", "{", ";", "=", "<", "/", ">", "p", ",", " "];
     const minPixelSIze = 5;
     const maxPixelSize = 15;
     let currentPixelSize = minPixelSIze;
@@ -33,7 +33,7 @@ export const Canvas = () => { //canvas component
 
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.font = `${pixelSize}px monospace`;
-      context.fillStyle = isDarkTheme ? 'white' : 'black';
+      context.fillStyle = isDarkTheme ? "white" : "black";
       //mapea los pixeles en simbolos segun su brillo
       for (let y = 0; y < imgData.height; y += pixelSize) {
         for (let x = 0; x < imgData.width; x += pixelSize) {
@@ -45,23 +45,23 @@ export const Canvas = () => { //canvas component
           const brightness = (r + g + b) / 3;
 
           // mapping to symbol
-          const symbolIndex = Math.floor((brightness / 255) * (symbols.length - 1));
+          const symbolIndex = Math.floor(
+            (brightness / 255) * (symbols.length - 1),
+          );
           const symbol = symbols[symbolIndex];
 
           // replace pixel by symbol
           context.fillText(symbol, x, y + pixelSize);
         }
       }
-    }
+    };
 
     const animatePixelSize = () => {
       const animate = () => {
         // Renderiza la imagen con los símbolos y el tamaño actual
         mapImageToSymbols(currentPixelSize, symbols);
 
-
         currentPixelSize += increment;
-
 
         if (currentPixelSize >= maxPixelSize) {
           return;
@@ -74,10 +74,7 @@ export const Canvas = () => { //canvas component
       // start animate
       animate();
     };
-
   }, [isDarkTheme]);
 
   return <canvas ref={canvasRef} className={styles.canvas} />;
 };
-
-
