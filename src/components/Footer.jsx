@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className={styles.footerContainer}>
         <div className={styles.redesContainer}>
           <a
-            href="/JavierManque-cv-1.pdf"
+            href="/JavierManque-cv.pdf"
             download="cv_Javier_Manque.pdf"
             className={styles.iconoEnlace}
           >
