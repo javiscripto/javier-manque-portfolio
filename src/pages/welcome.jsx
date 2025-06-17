@@ -20,7 +20,7 @@ export const Welcome = () => {
               datos realcionales y no relacionales (mySQL, SQLite y mongoDB).
             </p>
             <CustomButton>
-              <a href="/JavierManque-cv-1.pdf" download="cv_Javier_Manque.pdf">
+              <a href="/JavierManque-cv.pdf" download="cv_Javier_Manque.pdf">
                 Descarga mi CV
               </a>
             </CustomButton>
